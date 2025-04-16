@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Conference ticket generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <img src="./assets/images/logo-full.svg" alt="" />
+    </div>
+    <form action="" class="ticket-form">
+      <h1 id="main-text">Dev Meetup V4<br />2026 Starts Here!</h1>
+      <p id="sub-text">
+        Secure your spot at next year's biggest developers meetup.
+      </p>
+      <div class="form-box upload">
+        <label for="upload">Upload Avatar</label>
+        <input type="file" name="upload" id="upload" class="hidden-upload" />
+        <div class="upload-box" tabindex="0">
+          <div class="cloud-container">
+            <img src="./assets/images/icon-upload.svg" alt="" class="preview" />
+          </div>
+          <div class="action-buttons">
+            <button class="remove action">Remove Image</button>
+            <button class="change action">Change Image</button>
+          </div>
+          <p class="drag">Drag and drop or click to upload</p>
+        </div>
+        <small class="upload-info">
+          <img src="./assets/images/icon-info.svg" alt="" />Upload your photo
+          (JPG or PNG, max size: 500KB).</small
+        >
+        <small class="error-small upload-error">
+          <img src="./assets/images/icon-info.svg" alt="" />File too large.
+          Please upload a photo under 500MB.</small
+        >
+      </div>
+      <div class="form-box full-name">
+        <label for="fname">Full Name</label>
+        <input type="text" name="fname" id="fname" />
+        <small class="error-small fname-error">
+          <img src="./assets/images/icon-info.svg" alt="" />Please enter a full
+          name</small
+        >
+      </div>
+      <div class="form-box email">
+        <label for="email">Email Address</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="example@email.com"
+        />
+        <small class="error-small email-error">
+          <img src="./assets/images/icon-info.svg" alt="" />Please enter a valid
+          email address.</small
+        >
+      </div>
+      <div class="form-box github">
+        <label for="github">Github Username</label>
+        <input
+          type="text"
+          name="github"
+          id="github"
+          placeholder="@yourusername"
+        />
+        <small class="error-small github-error">
+          <img src="./assets/images/icon-info.svg" alt="" />Please enter a valid
+          github username</small
+        >
+      </div>
+      <button type="submit" class="submit">Generate My Ticket</button>
+    </form>
+
+    <div class="congrats">
+      <h1 class="main">
+        Congrats, <span class="fullname"></span>! Your ticket is ready.
+      </h1>
+      <p class="sub">
+        We've emailed your ticket to <span class="email-address"></span> and
+        will send updates in the run up to the event.
+      </p>
+
+      <div class="actual-ticket">
+        <div class="ticket-top">
+          <div class="logo-mark">
+            <img src="./assets/images/logo-mark.svg" alt="" />
+          </div>
+          <div class="logo-details">
+            <p class="logo-name">Coding Conf</p>
+            <p class="date-and-location">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket-bottom">
+          <div class="avatar-image">
+            <img
+              src="./assets/images/image-avatar.jpg"
+              alt=""
+              class="avatar-img"
+            />
+          </div>
+          <div class="avatar-details">
+            <p class="name"><span class="fullname-in-ticket"></span></p>
+            <div class="github-details">
+              <img src="./assets/images/icon-github.svg" alt="" />
+              <p class="github-username"><span class="gname"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Challenge : <a href="">100 Days Of Code </a> | Coded by
+      <a href="#">Hamud Stack</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
